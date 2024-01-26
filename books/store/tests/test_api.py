@@ -17,5 +17,5 @@ class BooksApiTestCase(APITestCase):
         # Сериализуем две созданные сущности
         serialized_data = BooksSerializer([book_1, book_2], many=True).data
 
-        self.assertEquals(status.HTTP_200_OK, response.status_code)
-        self.assertEquals(serialized_data, response.data)
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(serialized_data, response.data)
