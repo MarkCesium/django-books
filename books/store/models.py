@@ -10,3 +10,4 @@ class Book(models.Model):
         max_digits=6,
         decimal_places=2,
     )  # Указываем кол-во разрядов, кол-во знаков после запятой
+    author_name = models.CharField(max_length=255)
